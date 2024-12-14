@@ -1,0 +1,57 @@
+.modal-contact {
+  background-color: white;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.overlay-contact {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #1a1a2e;
+}
+
+.contact-details p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+.contact-details a {
+  color: #1a1a2e;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  background-color: #1a1a2e;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.close-btn:hover {
+  background-color: #333;
+}
