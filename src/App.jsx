@@ -1,38 +1,17 @@
-import React, { useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
-import About from "./pages/About"; 
+import About from "./pages/About";
 import "./App.css";
-
-function ScrollToSection() {
-  const location = useLocation();
-
-  useEffect(() => {
-    if (location.pathname === "/" && location.hash === "#mes-projets") {
-      const element = document.getElementById("mes-projets");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
-
-  return null;
-}
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio">
       <Header />
-      <ScrollToSection />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} /> 
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );

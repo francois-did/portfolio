@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "../styles/Projets.css";
 import ModalProjets from "./ModalProjets";
-import BookyImage from "../images/Booky.png";
-import SophieBluelImage from "../images/Sophie Bluel.png";
-import NinaCarducciImage from "../images/NinaCarducci.png";
-import KasaImage from "../images/Kasa.png";
-import VieuxGrimoireImage from "../images/VieuxGrimoire.png";
-import QwentaImage from "../images/Qwenta.png";
+import BookyImage from "../images/Booky.webp";
+import SophieBluelImage from "../images/Sophie Bluel.webp";
+import NinaCarducciImage from "../images/NinaCarducci.webp";
+import KasaImage from "../images/Kasa.webp";
+import VieuxGrimoireImage from "../images/VieuxGrimoire.webp";
+import QwentaImage from "../images/Qwenta.webp";
 
 function Projets() {
   const [selectedProjetId, setSelectedProjetId] = useState(null);
