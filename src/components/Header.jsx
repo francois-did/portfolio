@@ -50,7 +50,8 @@ function Header() {
           </nav>
         </div>
       </header>
-      {isModalOpen && <ModalContact isOpen={isModalOpen} onClose={closeModal} />}
+      {isModalOpen && <ModalContact onClose={closeModal} />}
+
     </>
   );
 }

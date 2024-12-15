@@ -2,7 +2,6 @@ import React from "react";
 import Modal from "react-modal";
 import "../styles/ModalContact.css";
 
-Modal.setAppElement("#root");
 
 function ModalContact({ isOpen, onClose }) {
   return (

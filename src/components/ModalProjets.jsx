@@ -2,7 +2,6 @@ import React from "react";
 import Modal from "react-modal";
 import "../styles/ModalProjets.css";
 
-Modal.setAppElement("#root");
 
 function ModalProjets({ projetId, onClose }) {
   const projets = [
@@ -73,8 +72,6 @@ function ModalProjets({ projetId, onClose }) {
   ];
 
   const projet = projets.find((p) => p.id === projetId);
-
-  if (!projet) return null;
 
   return (
     <Modal
