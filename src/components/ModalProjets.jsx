@@ -71,6 +71,7 @@ function ModalProjets({ projetId, onClose }) {
     },
   ];
 
+  // Recherche d'un projet correspondant à l'ID
   const projet = projets.find((p) => p.id === projetId);
 
   return (

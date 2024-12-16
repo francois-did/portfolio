@@ -20,10 +20,12 @@ function Projets() {
     { id: 6, titre: "Qwenta", description: "Agile", image: QwentaImage },
   ];
 
+  // Fonction pour ouvrir la modale au clique d'un projet
   const handleProjetClick = (id) => {
     setSelectedProjetId(id);
   };
 
+  // Fonction pour fermer la modale
   const closeModal = () => {
     setSelectedProjetId(null);
   };
@@ -48,8 +50,10 @@ function Projets() {
           </div>
         ))}
       </div>
+      {/* Affiche la modale seulement si un projet est sélectionné */}
       {selectedProjetId && (
-        <ModalProjets projetId={selectedProjetId} onClose={closeModal} />
+        <ModalProjets projetId={selectedProjetId} // Passe l'ID du projet sélectionné à la modale
+        onClose={closeModal} />
       )}
     </section>
   );

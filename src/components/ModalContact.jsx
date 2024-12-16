@@ -2,11 +2,9 @@ import React from "react";
 import Modal from "react-modal";
 import "../styles/ModalContact.css";
 
-
-function ModalContact({ isOpen, onClose }) {
+function ModalContact({ onClose }) {
   return (
     <Modal
-      isOpen={isOpen}
       onRequestClose={onClose}
       contentLabel="Mes informations"
       className="modal-contact"
