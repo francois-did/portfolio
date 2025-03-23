@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>François Didouche</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@v9.5.0/css/simple-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <p>François Didouche</p>
+        </div>
+        
+        <div class="liens">
+            <nav>
+                <ul>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Compétences</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+
+        <button class="burger">
+            <i class="fas fa-bars"></i>  
+        </button>
+
+        <div class="menu-mobile">
+            <nav>
+                <ul>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Projets</a></li>
+                    <li><a href="#">Compétences</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <main>
+        <div class="presentation">
+            <img src="images/dev_desk.jpg" alt="dev_desk">
+            <div class="overlay">
+                <h1>François Didouche - Développeur Web</h1>
+                <p>Je me spécialise dans l'utilisation de Node.js et React.js pour créer des solutions performantes.</p>
+                <div class="buttons">
+                    <a href="CV.pdf" class="btn btn-light" download>Télécharger mon CV</a>
+                    <a href="#projects" class="btn btn-dark">Mes projets</a>
+                </div>
+            </div>
+        </div>
+
+        
+            <h2> Présentation </h2>
+            <section class="about-container">
+                <div class="about-content">
+                    <div class="tabs">
+                      <button class="tab active" onclick="showSection('presentation')">Présentation</button>
+                      <button class="tab" onclick="showSection('langues')">Langues</button>
+                      <button class="tab" onclick="showSection('soft-skills')">Soft Skills</button>
+                    </div>
+                    <div class="image_and_text">
+                        <div class="about-image">
+                            <img src="images/montagne.avif" alt="Ma photo">
+                          </div>
+                          
+                          
+                        
+                            <div class="about-text">
+                              <div id="presentation" class="tab-content active">
+                                <h3>- À propos de moi -</h3>
+                                <p>Développeur web passionné, je crée des applications modernes avec React et Node.js. Toujours en quête d'amélioration, j’aime apprendre de nouvelles technologies et relever des défis.</p>
+                                
+                                <h3>- Expérience -</h3>
+                                <p>J’ai travaillé sur plusieurs projets incluant du développement front-end et back-end, en mettant un point d’honneur à produire un code propre et efficace.</p>
+                              </div>
+                        
+                              <div id="langues" class="tab-content">
+                                <h3>- Langues parlées -</h3>
+                                <p>🇫🇷 Français - Langue maternelle</p>
+                                <p>🇬🇧 Anglais - Niveau avancé</p>
+                                <p>🇪🇸 Espagnol - Notions de base</p>
+                              </div>
+                        
+                              <div id="soft-skills" class="tab-content">
+                                <h3>- Soft Skills -</h3>
+                                <p>✔ Capacité d'adaptation</p>
+                                <p>✔ Travail en autonomie</p>
+                                <p>✔ Esprit d'analyse</p>
+                                <p>✔ Communication efficace</p>
+                              </div>
+                            </div>
+                    </div>
+                
+                </div>
+              </section>
+              
+        
+
+        <div class="projets">
+            <h2> Projets </h2>
+
+            <div class="filtres">
+                <button id="all"> All </button>
+                <button id="front"> Frontend </button>
+                <button id="back"> Backend </button>
+            </div>
+
+            <div class="projets_container">
+                
+
+
+            </div>
+
+            <h2>Compétences</h2>
+
+            <section class="competences_section">
+              <h2 class="section_title">Mes compétences</h2>
+              <div class="competences_container">
+                
+                <!-- Frontend -->
+                <div class="competences animate">
+                  <h3>Frontend</h3>
+                  <div class="competence_grid">
+                    <div>
+                      <i class="fab fa-html5"></i>
+                      <p>HTML</p>
+                    </div>
+                    <div>
+                      <i class="fab fa-css3-alt"></i>
+                      <p>CSS</p>
+                    </div>
+                    <div>
+                      <i class="fab fa-js"></i>
+                      <p>Javascript</p>
+                    </div>
+                    <div>
+                      <i class="fab fa-react"></i>
+                      <p>React</p>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Backend -->
+                <div class="competences animate" style="animation-delay: 0.2s;">
+                  <h3>Backend</h3>
+                  <div class="competence_grid">
+                    <div>
+                      <i class="fab fa-node-js"></i>
+                      <p>Node</p>
+                    </div>
+                    <div>
+                      <i class="fas fa-server"></i>
+                      <p>Express</p>
+                    </div>
+                    <div>
+                      <i class="fas fa-database"></i>
+                      <p>MongoDB</p>
+                    </div>
+                    <div>
+                      <i class="fab fa-python"></i>
+                      <p>Django</p>
+                    </div>
+                  </div>
+                </div>
+                
+            
+              </div>
+            </section>
+            
+
+              
+              
+
+                
+                
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,609 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/************************
+        HEADER
+************************/        
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(0, 0, 0);
+    padding: 20px 24px;
+}
+
+header p {
+    font-size: 30px;
+}
+
+.liens {
+    margin-right: 65px;
+}
+
+.liens nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.liens nav ul a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.liens nav ul a:hover {
+    color: blue;
+}
+
+/**   Bouton Burger **/
+
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/** Menu caché **/
+
+.menu-mobile {
+    position: absolute;
+    top: 60px; /* Ajuste l'espacement sous le bouton */
+    right: 20px; /* Aligner sur le bouton burger */
+    width: 33%; /* Prend 1/3 de l'écran */
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    border-radius: 8px;
+    display: none; /* Caché par défaut */
+}
+
+.menu-mobile nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-mobile nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+/* Afficher le menu sous le bouton burger */
+.menu-mobile.active {
+    display: block;
+}
+
+/* Afficher la barre en mobile */
+@media screen and (max-width: 768px) {
+    .liens {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+/* Quand le menu est ouvert */
+.menu-mobile.active {
+    right: 0;
+}
+
+
+/****************
+    PRESENTATION
+****************/
+
+.presentation {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.presentation::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 1;
+}
+
+.presentation img {
+    height: 900px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    padding: 25px 60px;
+    border-radius: 10px;
+    width: 70%;
+}
+
+.overlay h1 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    margin-bottom: 45px;
+}
+
+.overlay p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin: 0 auto 60px auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    align-items: center;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: 0.3s;
+    font-weight: 400;
+}
+
+.btn-light {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.btn-dark {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+
+
+
+
+
+
+/****************
+    ABOUT
+****************/
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 80%;
+    margin: 50px auto;
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .about-image {
+    width: 40%; /* Ajuste la largeur pour s'aligner avec la boîte de texte */
+    display: flex;
+    justify-content: center;
+    height: 250px;
+  }
+  
+  .about-image img {
+    width: 100%; /* Remplit entièrement le conteneur */
+    max-width: 400px; /* Fixe une largeur max pour éviter qu'elle soit trop grande */
+    height: auto; /* Garde les proportions */
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+  }
+  
+  .about-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+.image_and_text {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-text h3 {
+    margin-bottom: 15px; 
+}
+
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .tab {
+    background: #fff;
+    border: 2px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+  }
+  
+  .tab:hover {
+    background: #e0e0e0;
+  }
+  
+  .tab.active {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+  }
+  
+  .about-text {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* ✅ Centre le texte */
+}
+  
+  /* Cache les sections sauf la première */
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  
+
+/*****************
+    Projets
+*****************/
+
+.projets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projets h2 {
+    margin-bottom: 130px;
+}
+
+.filtres {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 80px;
+}
+
+.filtres button {
+    padding: 10px 20px;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.filtres button:hover {
+    background-color: #ccc;
+    transform: scale(1.05);
+}
+
+.filtres button.active {
+    background-color: #333;
+    color: white;
+}
+
+
+
+/** Projets **/
+
+/* Nouvelle disposition des projets */
+/* Nouvelle disposition des projets */
+.projets_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 80%;
+    margin-bottom: 60px;
+}
+
+.projets_content {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    width: 96%;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.projets_content.fade-out {
+    animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projets_content:hover {
+    transform: scale(1.05);
+}
+
+.projets_content img {
+    width: 100%;
+    height: 500px; /* Ajusté pour être plus proportionné */
+    object-fit: cover;
+    display: block;
+}
+
+.projets_info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.title_projets {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.objectif_projet {
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projets_container {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+}
+
+/* Styles pour la modale */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/** Compétences **/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #eaefff;
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Titre de section */
+  .section_title {
+    text-align: center;
+    font-size: 44px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #3f51b5;
+    font-weight: 800;
+  }
+  
+  /* Conteneur principal */
+  .competences_container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 60px 40px;
+  }
+  
+  /* Carte de compétences */
+  .competences {
+    background: #ffffff;
+    padding: 60px 50px;
+    border-radius: 30px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s forwards;
+  }
+  
+  /* Titre des blocs */
+  .competences h3 {
+    font-size: 32px;
+    color: #3f51b5;
+    margin-bottom: 45px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Grille des compétences */
+  .competence_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  
+  /* Élément de compétence */
+  .competence_grid div {
+    background: #f5f7ff;
+    padding: 30px 10px;
+    border-radius: 18px;
+    text-align: center;
+    font-weight: 700;
+    cursor: default;
+    min-height: 140px; /* 🔥 ajoute cette ligne */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+  }
+
+  .competence_grid div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  /* Icônes */
+  .competence_grid i {
+    font-size: 48px;
+    margin-bottom: 12px;
+    color: #3f51b5;
+  }
+  
+  /* Texte principal */
+  .competence_grid p {
+    margin: 0;
+    font-size: 22px;
+    color: #2c3e50;
+  }
+  
+  /* Animation à l’apparition */
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .competences_container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .section_title {
+      font-size: 32px;
+    }
+  
+    .competences {
+      width: 90%;
+      padding: 50px 30px;
+    }
+  
+    .competence_grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+  
+    .competence_grid i {
+      font-size: 38px;
+    }
+  
+    .competence_grid p {
+      font-size: 18px;
+    }
+  }
+  
+  
+  
+
+
+
+/***********************************************************************************/
+h2 {
+    text-align: center;
+    font-size: 44px;
+}
+
+
