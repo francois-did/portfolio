@@ -59,10 +59,13 @@ header {
 .liens ul li a {
   color: white;
   font-size: 18px;
+  padding-bottom: 8px;
+  transition: 0.3s;
 }
 
 .liens ul li a:hover {
-  color: var(--color-accent);
+  color: #fff;
+  font-size: 19px;
 }
 
 .burger {
