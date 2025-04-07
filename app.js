@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "images/booky.png",
       titre: "Booky",
       sousTitre: "Site vitrine HTML/CSS",
-      objectifs: "Objectifs du projet",
+      objectifs: "Construire le site vitrine d'une agence de voyage",
       technos: "HTML, CSS",
       description:
         "Dans ce projet, j'ai du développer un site vitrine à partir d'une maquette Figma, le site devait être responsive et le code devait être passé aux validateurs W3C.",
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "images/bluel.png",
       titre: "Sophie Bluel",
       sousTitre: "Site vitrine professionnel",
-      objectifs: "Objectifs du projet",
+      objectifs: "Construire une interface dynamique ainsi qu’une page de connexion fonctionnelle",
       technos: "Javascript",
       description:
         "Dans ce projet, j'ai du développer pour une architecte d'intérieur : une page de présentation, une page de connexion de l'administrateur du site et une modale permettant à Sophie de pouvoir ajouter ou supprimer de nouveaux travaux.",

@@ -114,8 +114,14 @@ header {
   }
 }
 
+@media (max-width: 460px) {
+  .logo p {
+    font-size: 18px;
+  }
+}
+
 /* ---------------- PRESENTATION ---------------- */
-/* ----- PRESENTATION SECTION ----- */
+
 .presentation {
   position: relative;
   width: 100%;
@@ -263,7 +269,7 @@ header {
 
 .about-container h2 {
   text-align: center;
-  font-size: 36px;
+  font-size: 46px;
   margin-bottom: 40px;
   color: var(--color-primary);
 }
@@ -283,6 +289,7 @@ header {
   border-radius: 20px;
   cursor: pointer;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .tab.active {
@@ -329,10 +336,12 @@ header {
 
 .about-text h3 {
   margin-bottom: 10px;
+  font-size: 22px;
 }
 
-.about-text p:not(:last-child) {
+.about-text p {
   margin-bottom: 12px;
+  font-size: 17px;
 }
 
 
@@ -345,6 +354,46 @@ header {
   display: block;
 }
 
+
+@media (max-width: 600px) {
+  .about-text h3 {
+    font-size: 18px;
+  }
+
+  .about-text p{
+    font-size: 15px;
+  }
+  
+}
+
+
+@media (max-width: 460px) {
+
+  .about-text h3 {
+    font-size: 16px;
+  }
+
+  .about-text p{
+    font-size: 13px;
+  }
+
+  .tab {
+    font-size: 13 px;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .about-container h2 {
+    font-size: 36px;
+  }
+
+  .tab {
+    font-size: 12px;
+  }
+}
+
+
 /* ---------------- PROJETS ---------------- */
 .projets {
   padding: 80px 20px;
@@ -352,7 +401,7 @@ header {
 }
 
 .projets h2 {
-  font-size: 36px;
+  font-size: 46px;
   margin-bottom: 40px;
   color: var(--color-primary);
 }
@@ -366,6 +415,7 @@ header {
 }
 
 .filtres button {
+  font-size: 18px;
   padding: 10px 20px;
   border-radius: 20px;
   font-weight: bold;
@@ -395,6 +445,24 @@ header {
   .projets_container {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 460px) {
+  .filtres button {
+    font-size: 13px;
+  }
+  
+}
+
+@media (max-width: 360px) {
+  .projets h2 {
+    font-size: 36px;
+  }
+
+  .filtres button {
+    font-size: 12px;
+  }
+  
 }
 
 .projets_content {
@@ -582,6 +650,7 @@ header {
 /* ---------------- COMPETENCES ---------------- */
 .competences_section {
   text-align: center;
+  padding: 80px 20px;
 }
 
 .section_title {
@@ -602,7 +671,7 @@ header {
   background: white;
   padding: 50px 40px;
   border-radius: 25px;
-  width: 480px; /* ✅ plus large */
+  width: 480px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
@@ -619,18 +688,28 @@ header {
   letter-spacing: 1px;
 }
 
+/* --------- GRID DES COMPÉTENCES --------- */
 .competence_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  align-items: stretch;
 }
 
 .competence_grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #f0f0f0;
   padding: 30px 20px;
   border-radius: 15px;
   text-align: center;
   transition: all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
 }
 
 .competence_grid div:hover {
@@ -650,6 +729,31 @@ header {
   font-size: 20px;
   font-weight: 600;
 }
+
+/* --------- RESPONSIVE --------- */
+@media (max-width: 480px) {
+  .competence_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competence_grid div {
+    width: 70%;        /* ✅ réduit la largeur */
+    margin: 0 auto;    /* ✅ centre horizontalement */
+    aspect-ratio: auto;
+    min-height: 140px;
+    padding: 25px 15px;
+  }
+
+  .competence_grid img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .competence_grid p {
+    font-size: 17px;
+  }
+}
+
 
 
 
